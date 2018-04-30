@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1CB809208FA81E005CC1A2 /* Pose01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC1CB808208FA81E005CC1A2 /* Pose01.jpg */; };
+		BC5B53DC2090F9A9000B450B /* PoseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */; };
+		BC5B53DE2090F9D7000B450B /* PoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B53DD2090F9D7000B450B /* PoseViewController.swift */; };
+		BC625DF6207FD225008CF14A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC625DF5207FD225008CF14A /* CategoryCollectionViewCell.swift */; };
+		BCAFAAB6208673CC007FE94F /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAFAAB5208673CC007FE94F /* one.png */; };
+		BCAFAAB82086755D007FE94F /* two.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCAFAAB72086755D007FE94F /* two.jpg */; };
 		BCE50618207D2BCC007683AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50617207D2BCC007683AF /* AppDelegate.swift */; };
-		BCE5061A207D2BCC007683AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50619207D2BCC007683AF /* ViewController.swift */; };
+		BCE5061A207D2BCC007683AF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50619207D2BCC007683AF /* CategoryViewController.swift */; };
 		BCE5061D207D2BCC007683AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5061B207D2BCC007683AF /* Main.storyboard */; };
 		BCE5061F207D2BCC007683AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE5061E207D2BCC007683AF /* Assets.xcassets */; };
 		BCE50622207D2BCC007683AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE50620207D2BCC007683AF /* LaunchScreen.storyboard */; };
@@ -34,9 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC1CB808208FA81E005CC1A2 /* Pose01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Pose01.jpg; path = ../../../Downloads/Pose01.jpg; sourceTree = "<group>"; };
+		BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC5B53DD2090F9D7000B450B /* PoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseViewController.swift; sourceTree = "<group>"; };
+		BC625DF5207FD225008CF14A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BCAFAAB5208673CC007FE94F /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = one.png; path = Assets.xcassets/One.imageset/one.png; sourceTree = "<group>"; };
+		BCAFAAB72086755D007FE94F /* two.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = two.jpg; path = ../../two.jpg; sourceTree = "<group>"; };
 		BCE50614207D2BCC007683AF /* Tester2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tester2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE50617207D2BCC007683AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCE50619207D2BCC007683AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BCE50619207D2BCC007683AF /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BCE5061C207D2BCC007683AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCE5061E207D2BCC007683AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE50621207D2BCC007683AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,12 +109,18 @@
 		BCE50616207D2BCC007683AF /* Tester2 */ = {
 			isa = PBXGroup;
 			children = (
+				BCAFAAB72086755D007FE94F /* two.jpg */,
+				BCAFAAB5208673CC007FE94F /* one.png */,
 				BCE50617207D2BCC007683AF /* AppDelegate.swift */,
-				BCE50619207D2BCC007683AF /* ViewController.swift */,
+				BCE50619207D2BCC007683AF /* CategoryViewController.swift */,
+				BC5B53DD2090F9D7000B450B /* PoseViewController.swift */,
+				BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */,
 				BCE5061B207D2BCC007683AF /* Main.storyboard */,
+				BC625DF5207FD225008CF14A /* CategoryCollectionViewCell.swift */,
 				BCE5061E207D2BCC007683AF /* Assets.xcassets */,
 				BCE50620207D2BCC007683AF /* LaunchScreen.storyboard */,
 				BCE50623207D2BCC007683AF /* Info.plist */,
+				BC1CB808208FA81E005CC1A2 /* Pose01.jpg */,
 			);
 			path = Tester2;
 			sourceTree = "<group>";
@@ -233,8 +251,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCE50622207D2BCC007683AF /* LaunchScreen.storyboard in Resources */,
+				BCAFAAB6208673CC007FE94F /* one.png in Resources */,
 				BCE5061F207D2BCC007683AF /* Assets.xcassets in Resources */,
+				BCAFAAB82086755D007FE94F /* two.jpg in Resources */,
 				BCE5061D207D2BCC007683AF /* Main.storyboard in Resources */,
+				BC1CB809208FA81E005CC1A2 /* Pose01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCE5061A207D2BCC007683AF /* ViewController.swift in Sources */,
+				BC5B53DE2090F9D7000B450B /* PoseViewController.swift in Sources */,
+				BCE5061A207D2BCC007683AF /* CategoryViewController.swift in Sources */,
+				BC5B53DC2090F9A9000B450B /* PoseCollectionViewCell.swift in Sources */,
+				BC625DF6207FD225008CF14A /* CategoryCollectionViewCell.swift in Sources */,
 				BCE50618207D2BCC007683AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
