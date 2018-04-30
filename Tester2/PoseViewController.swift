@@ -12,7 +12,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
 
     @IBOutlet weak var PoseCollectionView: UICollectionView!
     var labels: [ImageCell] = [
-        ImageCell(image: UIImage(named: "one.png")!, name: "two", description: "Test", favorite: false)
+        ImageCell(image: UIImage(named: "one.jpg")!, name: "two", description: "Test", favorite: false)
     ]
     
     override func viewDidLoad() {

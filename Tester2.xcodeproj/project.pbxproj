@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC1CB809208FA81E005CC1A2 /* Pose01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC1CB808208FA81E005CC1A2 /* Pose01.jpg */; };
 		BC5B53DC2090F9A9000B450B /* PoseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */; };
 		BC5B53DE2090F9D7000B450B /* PoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5B53DD2090F9D7000B450B /* PoseViewController.swift */; };
 		BC625DF6207FD225008CF14A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC625DF5207FD225008CF14A /* CategoryCollectionViewCell.swift */; };
 		BCAFAAB6208673CC007FE94F /* one.png in Resources */ = {isa = PBXBuildFile; fileRef = BCAFAAB5208673CC007FE94F /* one.png */; };
-		BCAFAAB82086755D007FE94F /* two.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCAFAAB72086755D007FE94F /* two.jpg */; };
+		BCD4423F20978EBB008601C0 /* Pose01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD4423E20978EBB008601C0 /* Pose01.jpg */; };
+		BCD4424120978EDB008601C0 /* two.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCD4424020978EDB008601C0 /* two.jpg */; };
 		BCE50618207D2BCC007683AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50617207D2BCC007683AF /* AppDelegate.swift */; };
 		BCE5061A207D2BCC007683AF /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50619207D2BCC007683AF /* CategoryViewController.swift */; };
 		BCE5061D207D2BCC007683AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE5061B207D2BCC007683AF /* Main.storyboard */; };
@@ -40,12 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BC1CB808208FA81E005CC1A2 /* Pose01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Pose01.jpg; path = ../../../Downloads/Pose01.jpg; sourceTree = "<group>"; };
 		BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC5B53DD2090F9D7000B450B /* PoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseViewController.swift; sourceTree = "<group>"; };
 		BC625DF5207FD225008CF14A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BCAFAAB5208673CC007FE94F /* one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = one.png; path = Assets.xcassets/One.imageset/one.png; sourceTree = "<group>"; };
-		BCAFAAB72086755D007FE94F /* two.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = two.jpg; path = ../../two.jpg; sourceTree = "<group>"; };
+		BCD4423E20978EBB008601C0 /* Pose01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Pose01.jpg; path = ../../../../Downloads/Pose01.jpg; sourceTree = "<group>"; };
+		BCD4424020978EDB008601C0 /* two.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = two.jpg; path = ../../../../Desktop/two.jpg; sourceTree = "<group>"; };
 		BCE50614207D2BCC007683AF /* Tester2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tester2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE50617207D2BCC007683AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE50619207D2BCC007683AF /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
@@ -109,9 +109,10 @@
 		BCE50616207D2BCC007683AF /* Tester2 */ = {
 			isa = PBXGroup;
 			children = (
-				BCAFAAB72086755D007FE94F /* two.jpg */,
+				BCD4423E20978EBB008601C0 /* Pose01.jpg */,
 				BCAFAAB5208673CC007FE94F /* one.png */,
 				BCE50617207D2BCC007683AF /* AppDelegate.swift */,
+				BCD4424020978EDB008601C0 /* two.jpg */,
 				BCE50619207D2BCC007683AF /* CategoryViewController.swift */,
 				BC5B53DD2090F9D7000B450B /* PoseViewController.swift */,
 				BC5B53DB2090F9A9000B450B /* PoseCollectionViewCell.swift */,
@@ -120,7 +121,6 @@
 				BCE5061E207D2BCC007683AF /* Assets.xcassets */,
 				BCE50620207D2BCC007683AF /* LaunchScreen.storyboard */,
 				BCE50623207D2BCC007683AF /* Info.plist */,
-				BC1CB808208FA81E005CC1A2 /* Pose01.jpg */,
 			);
 			path = Tester2;
 			sourceTree = "<group>";
@@ -250,12 +250,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD4424120978EDB008601C0 /* two.jpg in Resources */,
 				BCE50622207D2BCC007683AF /* LaunchScreen.storyboard in Resources */,
 				BCAFAAB6208673CC007FE94F /* one.png in Resources */,
 				BCE5061F207D2BCC007683AF /* Assets.xcassets in Resources */,
-				BCAFAAB82086755D007FE94F /* two.jpg in Resources */,
 				BCE5061D207D2BCC007683AF /* Main.storyboard in Resources */,
-				BC1CB809208FA81E005CC1A2 /* Pose01.jpg in Resources */,
+				BCD4423F20978EBB008601C0 /* Pose01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
