@@ -9,7 +9,7 @@
 import UIKit
 
 class PoseViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
-
+    // collection view
     @IBOutlet weak var PoseCollectionView: UICollectionView!
     var labels: [ImageCell] = [
         ImageCell(image: UIImage(named: "one.jpg")!, name: "two", description: "Test", favorite: false)
