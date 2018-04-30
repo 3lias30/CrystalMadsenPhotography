@@ -9,7 +9,7 @@
 import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    //Some weird test thingy i was told to do because idk.
     @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
