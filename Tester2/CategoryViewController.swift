@@ -15,7 +15,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
     var images: [CategoryCell] = [
         CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses"),
-        CategoryCell(image: UIImage(named: "two.jpg")!, name: "two"),
+        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two"),
     ]
     
     override func viewDidLoad() {
