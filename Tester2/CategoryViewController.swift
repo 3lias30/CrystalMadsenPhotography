@@ -13,6 +13,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var testLabel: UILabel!
     
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
+    /*Creates names for images in each cell*/
     var images: [CategoryCell] = [
         CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses"),
         CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two"),
@@ -21,6 +22,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //Assigns the collection views to the class
         self.CategoryCollectionView.delegate = self
         self.CategoryCollectionView.dataSource = self
     }
@@ -33,11 +35,15 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         return images.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Collection_cell", for: indexPath) as! CategoryCollectionViewCell
         
+        //Creates view images for categories
         cell.ImageView.image = images[indexPath.row].image
+       //Creates view texts for categories
         cell.ImageLabel.text = images[indexPath.row].name
         
+        //returns the image and text
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

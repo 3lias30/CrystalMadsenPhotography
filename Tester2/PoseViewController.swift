@@ -17,6 +17,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //
         self.PoseCollectionView.delegate = self
         self.PoseCollectionView.dataSource = self
         // Do any additional setup after loading the view.
@@ -33,11 +34,11 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell", for: indexPath) as! PoseCollectionViewCell
-        
+        //labels for images, texts, and labels
         cell.poseImageView.image = labels[indexPath.row].image
         cell.poseNameLabel.text = labels[indexPath.row].name
         cell.poseDescriptionLabel.text = labels[indexPath.row].description
-        
+        //Displays cell
         return cell
         
     }
