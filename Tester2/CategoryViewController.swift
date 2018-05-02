@@ -15,8 +15,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
     /*Creates names for images in each cell*/
     var images: [CategoryCell] = [
-        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses"),
-        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two"),
+        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses")
+        //CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two"),
     ]
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // You can use indexPath to get "cell number x", or get the cell like:
-        var temp = images[indexPath.row].name
+        let temp = images[indexPath.row].name
         testLabel.text = temp
     }
 }

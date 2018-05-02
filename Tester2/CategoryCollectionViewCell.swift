@@ -14,7 +14,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
  }
  
  class CategoryCell {
-    var image : UIImage;
+    var image : UIImage!;
     var name : String = "";
     
     init(image: UIImage, name: String) {
