@@ -10,13 +10,13 @@ import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var tommyLabel: UILabel!
     
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
     /*Creates names for images in each cell*/
     var images: [CategoryCell] = [
-        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses")
-        //CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two"),
+        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses", iD: "Sitting"),
+        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two", iD: "Standing"),
     ]
     
     override func viewDidLoad() {
@@ -41,15 +41,15 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Creates view images for categories
         cell.ImageView.image = images[indexPath.row].image
        //Creates view texts for categories
-        cell.ImageLabel.text = images[indexPath.row].name
+        cell.ImageLabel.text = images[indexPath.row].ImageName
         
         //returns the image and text
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // You can use indexPath to get "cell number x", or get the cell like:
-        let temp = images[indexPath.row].name
-        testLabel.text = temp
+        let temp = images[indexPath.row].ImageName
+        tommyLabel.text = temp
     }
 }
 

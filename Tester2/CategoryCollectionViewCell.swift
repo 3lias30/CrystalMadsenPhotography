@@ -15,11 +15,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
  
  class CategoryCell {
     var image : UIImage!;
-    var name : String = "";
+    var ImageName : String = "";
+    var Identifier : String = "";
     
-    init(image: UIImage, name: String) {
+    init(image: UIImage, name: String, iD: String) {
         self.image = image;
-        self.name = name;
+        self.ImageName = name;
+        self.Identifier = iD;
     }
  }
 

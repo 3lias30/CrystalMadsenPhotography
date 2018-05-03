@@ -52,6 +52,7 @@
                                         <connections>
                                             <outlet property="ImageLabel" destination="Umk-J1-bvk" id="RJ6-MJ-uQf"/>
                                             <outlet property="ImageView" destination="SuH-BN-cDw" id="HQx-k3-Sun"/>
+                                            <segue destination="0By-mO-hI6" kind="show" id="fpz-UC-l0D"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -68,15 +69,11 @@
                         <viewLayoutGuide key="safeArea" id="gMY-An-ReW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Ero-W9-rM5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Pzb-4f-19Y">
-                            <connections>
-                                <segue destination="0By-mO-hI6" kind="show" id="A1p-QU-moT"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Pzb-4f-19Y"/>
                     </navigationItem>
                     <connections>
                         <outlet property="CategoryCollectionView" destination="lCY-ur-cEf" id="v3P-dE-Deo"/>
-                        <outlet property="testLabel" destination="qAa-P0-0se" id="ODv-UU-ykY"/>
+                        <outlet property="tommyLabel" destination="qAa-P0-0se" id="7XU-6C-bTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-DC-tYr" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,9 +15,11 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
         ImageCell(image: UIImage(named: "Pose03.jpg")!, name: "two", description: "Test", favorite: false)
     ]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
+        
         self.PoseCollectionView.delegate = self
         self.PoseCollectionView.dataSource = self
         // Do any additional setup after loading the view.
