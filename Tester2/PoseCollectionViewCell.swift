@@ -15,7 +15,7 @@ class PoseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var poseFaovriteBool: UILabel!
 }
 
-
+//Creates cells for the image placement
 class ImageCell {
     var image: UIImage;
     var name: String = "";
