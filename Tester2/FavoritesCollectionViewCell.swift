@@ -9,6 +9,13 @@
 import UIKit
 
 class FavoritesCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var FavImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+}
+
+class testCell {
+    var image2: UIImage;
     
+    init(image2: UIImage){
+        self.image2 = image2
+    }
 }

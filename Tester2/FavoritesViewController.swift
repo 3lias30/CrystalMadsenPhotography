@@ -8,20 +8,33 @@
 
 import UIKit
 
+
+
 class FavoritesViewController: UIViewController ,  UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    var testThingy: [testCell] = [
+        testCell(image2: UIImage(named: "Pose03.jpg")!)
+    ]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return testThingy.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell2", for: indexPath) as! FavoritesCollectionViewCell
+        
+        cell2.imageView.image = testThingy[indexPath.row].image2
+        
+        return cell2
     }
     
 
     @IBOutlet weak var FavoriteCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.FavoriteCollectionView.delegate = self
+        self.FavoriteCollectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
 

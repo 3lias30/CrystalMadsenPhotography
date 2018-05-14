@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>388801339017-dll77t90fu2j1pm2e3lm9g7hcuai84uk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.388801339017-dll77t90fu2j1pm2e3lm9g7hcuai84uk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBbfG1whp4lXMwhqtkJOw3_xZVfXaNsMWM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>388801339017</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>CrystalMadsenPhotography</string>
+	<key>PROJECT_ID</key>
+	<string>crystalmadsenphotography-407a5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>crystalmadsenphotography-407a5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:388801339017:ios:59038b82ac4a10b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://crystalmadsenphotography-407a5.firebaseio.com</string>
+</dict>
+</plist>

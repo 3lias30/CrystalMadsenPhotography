@@ -69,7 +69,12 @@
                         <viewLayoutGuide key="safeArea" id="gMY-An-ReW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="Ero-W9-rM5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="Pzb-4f-19Y"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="9U4-9O-yqi">
+                            <connections>
+                                <action selector="testFavsButton:" destination="kc9-Mu-RrO" id="cHt-F6-6xy"/>
+                                <segue destination="zxF-X0-Xo3" kind="show" identifier="testButton" id="N9S-Rw-XTs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CategoryCollectionView" destination="lCY-ur-cEf" id="v3P-dE-Deo"/>
@@ -187,7 +192,7 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="FavImageView" destination="k8s-c8-ohr" id="w72-xA-LLn"/>
+                                            <outlet property="imageView" destination="k8s-c8-ohr" id="1oG-fZ-RBz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -202,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ho6-So-Ybs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="-142"/>
+            <point key="canvasLocation" x="1262" y="707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SC2-Yw-nAL">

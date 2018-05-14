@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CategoryViewController.swift
 //  Tester2
 //
 //  Created by CS Student on 4/10/18.
@@ -9,6 +9,10 @@
 import UIKit
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBAction func testFavsButton(_ sender: Any) {
+        performSegue(withIdentifier: "testButton", sender: self)
+    }
     
     @IBOutlet weak var tommyLabel: UILabel!
     
