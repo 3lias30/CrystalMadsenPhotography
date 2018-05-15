@@ -12,7 +12,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var ImageLabel: UILabel!
  }
- 
+ //Creates cell for category placement
  class CategoryCell {
     var image : UIImage!;
     var ImageName : String = "";
