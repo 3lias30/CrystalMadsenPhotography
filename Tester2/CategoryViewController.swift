@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var db: Firestore!;
+    
+    var storage: Storage!;
+    
+    var images = [CategoryCell]()
+    
+
     
     @IBAction func testFavsButton(_ sender: Any) {
         performSegue(withIdentifier: "testButton", sender: self)
@@ -18,10 +28,6 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @IBOutlet weak var CategoryCollectionView: UICollectionView!
     /*Creates names for images in each cell*/
-    var images: [CategoryCell] = [
-        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "Sitting Poses", iD: "Sitting"),
-        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "two", iD: "Standing"),
-    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +35,39 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         //Assigns the collection views to the class
         self.CategoryCollectionView.delegate = self
         self.CategoryCollectionView.dataSource = self
+        
+        db = Firestore.firestore();
+        storage = Storage.storage();
+        let userRef = db.collection("Categories");
+        userRef.getDocuments() { (querySnapshot, err) in
+
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    var name = "";
+                    var image: UIImage? = nil;
+                    
+                    let url = document.get("url") as? String
+                    let storageRef = self.storage.reference(forURL: url!)
+                    print(storageRef.name)
+                    name = storageRef.name
+                    storageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            image = UIImage(data: data!)
+                            self.images.append(CategoryCell(image: image!, name: name, iD: "" ))
+                            print(self.images.count)
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
