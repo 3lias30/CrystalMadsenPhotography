@@ -6,6 +6,7 @@ target 'Tester2' do
   use_frameworks!
 
   # Pods for Tester2
+  pod 'Firebase'
   pod 'Firebase/Core' 
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'

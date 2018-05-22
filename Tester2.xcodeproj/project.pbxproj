@@ -26,6 +26,7 @@
 		BCE50622207D2BCC007683AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE50620207D2BCC007683AF /* LaunchScreen.storyboard */; };
 		BCE5062D207D2BCC007683AF /* Tester2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE5062C207D2BCC007683AF /* Tester2Tests.swift */; };
 		BCE50638207D2BCC007683AF /* Tester2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE50637207D2BCC007683AF /* Tester2UITests.swift */; };
+		BCEB132120B340BE002D22E1 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCEB132220B340BE002D22E1 /* FirebaseStorage.framework */; };
 		F69CF19EFC9740F7532066A3 /* Pods_Tester2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4272F2D60D106FB93CD7760B /* Pods_Tester2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		BCE50633207D2BCC007683AF /* Tester2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tester2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCE50637207D2BCC007683AF /* Tester2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester2UITests.swift; sourceTree = "<group>"; };
 		BCE50639207D2BCC007683AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCEB132220B340BE002D22E1 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC25AE70BF8432E52C38639B /* Pods-Tester2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tester2UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tester2UITests/Pods-Tester2UITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF43713560603F5E7190E920 /* Pods_Tester2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tester2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCEB132120B340BE002D22E1 /* FirebaseStorage.framework in Frameworks */,
 				1931D0A97D20394A8C391691 /* Pods_Tester2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 		CFB267E32CD5DEF2BD458625 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCEB132220B340BE002D22E1 /* FirebaseStorage.framework */,
 				2FFCB545ECDD6F91F447F992 /* Pods_Tester2.framework */,
 				4272F2D60D106FB93CD7760B /* Pods_Tester2Tests.framework */,
 				DF43713560603F5E7190E920 /* Pods_Tester2UITests.framework */,

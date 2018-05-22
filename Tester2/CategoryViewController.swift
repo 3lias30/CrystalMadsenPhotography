@@ -50,22 +50,23 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
                     
                     let url = document.get("url") as? String
                     let storageRef = self.storage.reference(forURL: url!)
-                    print(storageRef.name)
+                    // print(storageRef.name)
                     name = storageRef.name
-                    storageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    storageRef.getData(maxSize: 1 * 2048 * 2048) { data, error in
                         if let error = error {
                             print(error)
                         } else {
                             // Data for "images/island.jpg" is returned
                             image = UIImage(data: data!)
-                            self.images.append(CategoryCell(image: image!, name: name, iD: "" ))
-                            print(self.images.count)
+                            self.images.append(CategoryCell(image: UIImage(data: data!)!, name: name, iD: "" ))
+                            print(name)
                             
                         }
                     }
                 }
             }
         }
+        CategoryCollectionView.reloadData()
     }
     
 
