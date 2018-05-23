@@ -7,22 +7,26 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseStorage
+// import Firebase
+// import FirebaseStorage
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var db: Firestore!;
+   // var db: Firestore!;
     
-    var storage: Storage!;
+    //var storage: Storage!;
     
-    var images = [CategoryCell]()
+    var images: [CategoryCell] = [
+        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "test", iD: "001"),
+        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "test2", iD: "002")
+    ]
     
 
-    
+    /*
     @IBAction func testFavsButton(_ sender: Any) {
         performSegue(withIdentifier: "testButton", sender: self)
     }
+    */
     
     @IBOutlet weak var tommyLabel: UILabel!
     
@@ -36,6 +40,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.CategoryCollectionView.delegate = self
         self.CategoryCollectionView.dataSource = self
         
+        /*
         db = Firestore.firestore();
         storage = Storage.storage();
         let userRef = db.collection("Categories");
@@ -67,6 +72,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             }
         }
         CategoryCollectionView.reloadData()
+         */
     }
     
 
