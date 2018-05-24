@@ -7,22 +7,41 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class PoseViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource{
     // collection view
     @IBOutlet weak var PoseCollectionView: UICollectionView!
-    var labels: [ImageCell] = [
-        ImageCell(image: UIImage(named: "Pose03.jpg")!, name: "two", description: "Test", favorite: false)
-    ]
+    
+    var db: Firestore!
+    var storage: Storage!;
+    
+    var labels = [ImageCell]()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        db = Firestore.firestore();
+        storage = Storage.storage();
+        
+        DispatchQueue.main.async {
+            self.loadData()
+        }
+        
         self.PoseCollectionView.delegate = self
         self.PoseCollectionView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        PoseCollectionView.reloadData()
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +53,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
         return labels.count
     }
     
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell", for: indexPath) as! PoseCollectionViewCell
         //labels for images, texts, and labels
@@ -43,5 +63,40 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
         //Displays cell
         return cell
         
+    }
+ 
+    
+    func loadData() {
+        
+        let userRef = db.collection("Categories");
+        userRef.getDocuments() { (querySnapshot, err) in
+            
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    var name = "";
+                    var image: UIImage? = nil;
+                    
+                    let url = document.get("url") as? String
+                    let identifier = document.get("identifier") as? String
+                    
+                    let storageRef = self.storage.reference(forURL: url!)
+                    // print(storageRef.name)
+                    name = storageRef.name
+                    storageRef.getData(maxSize: 1 * 2048 * 2048) { data, error in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            image = UIImage(data: data!)
+                            self.labels.append(ImageCell(image: UIImage(data: data!)!, name: name, description: identifier!))
+                            self.PoseCollectionView.reloadData()
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -87,10 +87,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
             } else {
                 for document in querySnapshot!.documents {
                     var name = "";
-                    var image: UIImage? = nil;
                     
                     let url = document.get("url") as? String
-                    let identifier = document.get(identifier: "")
+                    let identifier = document.get("identifier") as? String
                     
                     let storageRef = self.storage.reference(forURL: url!)
                     // print(storageRef.name)
@@ -99,9 +98,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
                         if let error = error {
                             print(error)
                         } else {
-                            // Data for "images/island.jpg" is returned
-                            image = UIImage(data: data!)
-                            self.images.append(CategoryCell(image: UIImage(data: data!)!, name: name, iD: "" ))
+
+                            self.images.append(CategoryCell(image: UIImage(data: data!)!, name: name, iD: identifier!))
                             self.CategoryCollectionView.reloadData()
                             
                         }

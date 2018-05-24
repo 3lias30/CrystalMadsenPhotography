@@ -20,13 +20,11 @@ class ImageCell {
     var image: UIImage;
     var name: String = "";
     var description: String = "";
-    var favorite: Bool = false;
     
-    init(image: UIImage, name: String, description: String, favorite: Bool) {
+    init(image: UIImage, name: String, description: String) {
         self.image = image;
         self.name = name;
         self.description = description;
-        self.favorite = favorite;
         
     }
 }
