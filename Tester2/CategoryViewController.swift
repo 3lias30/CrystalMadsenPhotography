@@ -7,19 +7,15 @@
 //
 
 import UIKit
-// import Firebase
-// import FirebaseStorage
+import Firebase
+import FirebaseStorage
 
 class CategoryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-   // var db: Firestore!;
+    var db: Firestore!
+    var storage: Storage!;
     
-    //var storage: Storage!;
-    
-    var images: [CategoryCell] = [
-        CategoryCell(image: UIImage(named: "Pose01.jpg")!, name: "test", iD: "001"),
-        CategoryCell(image: UIImage(named: "Pose02.jpg")!, name: "test2", iD: "002")
-    ]
+    var images = [CategoryCell]()
     
 
     /*
@@ -35,46 +31,26 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //Assigns the collection views to the class
-        self.CategoryCollectionView.delegate = self
-        self.CategoryCollectionView.dataSource = self
-        
-        /*
         db = Firestore.firestore();
         storage = Storage.storage();
-        let userRef = db.collection("Categories");
-        userRef.getDocuments() { (querySnapshot, err) in
-
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    var name = "";
-                    var image: UIImage? = nil;
-                    
-                    let url = document.get("url") as? String
-                    let storageRef = self.storage.reference(forURL: url!)
-                    // print(storageRef.name)
-                    name = storageRef.name
-                    storageRef.getData(maxSize: 1 * 2048 * 2048) { data, error in
-                        if let error = error {
-                            print(error)
-                        } else {
-                            // Data for "images/island.jpg" is returned
-                            image = UIImage(data: data!)
-                            self.images.append(CategoryCell(image: UIImage(data: data!)!, name: name, iD: "" ))
-                            print(name)
-                            
-                        }
-                    }
-                }
-            }
+        
+        DispatchQueue.main.async {
+            self.loadData()
         }
-        CategoryCollectionView.reloadData()
-         */
+        // Do any additional setup after loading the view, typically from a nib.
+        //Assigns the collection views to the class
+        self.CategoryCollectionView.dataSource = self
+        self.CategoryCollectionView.delegate = self
+        
     }
     
+    override func viewDidLayoutSubviews() {
+        CategoryCollectionView.reloadData()
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,7 +61,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Collection_cell", for: indexPath) as! CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CategoryCollectionViewCell
         
         //Creates view images for categories
         cell.ImageView.image = images[indexPath.row].image
@@ -99,6 +75,40 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
         // You can use indexPath to get "cell number x", or get the cell like:
         let temp = images[indexPath.row].ImageName
         tommyLabel.text = temp
+    }
+    
+    func loadData() {
+        
+        let userRef = db.collection("Categories");
+        userRef.getDocuments() { (querySnapshot, err) in
+            
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    var name = "";
+                    var image: UIImage? = nil;
+                    
+                    let url = document.get("url") as? String
+                    let identifier = document.get(identifier: "")
+                    
+                    let storageRef = self.storage.reference(forURL: url!)
+                    // print(storageRef.name)
+                    name = storageRef.name
+                    storageRef.getData(maxSize: 1 * 2048 * 2048) { data, error in
+                        if let error = error {
+                            print(error)
+                        } else {
+                            // Data for "images/island.jpg" is returned
+                            image = UIImage(data: data!)
+                            self.images.append(CategoryCell(image: UIImage(data: data!)!, name: name, iD: "" ))
+                            self.CategoryCollectionView.reloadData()
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
