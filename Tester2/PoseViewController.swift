@@ -19,10 +19,15 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     var labels = [ImageCell]()
     
+    var testString: String = ""
     
+    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(testString)
+        testLabel.text = testString
         
         db = Firestore.firestore();
         storage = Storage.storage();
@@ -68,7 +73,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     func loadData() {
         
-        let userRef = db.collection("Categories");
+        let userRef = db.collection(testString);
         userRef.getDocuments() { (querySnapshot, err) in
             
             if let err = err {

@@ -59,7 +59,7 @@
                                         <connections>
                                             <outlet property="ImageLabel" destination="Umk-J1-bvk" id="RJ6-MJ-uQf"/>
                                             <outlet property="ImageView" destination="SuH-BN-cDw" id="HQx-k3-Sun"/>
-                                            <segue destination="0By-mO-hI6" kind="show" id="fpz-UC-l0D"/>
+                                            <segue destination="0By-mO-hI6" kind="show" identifier="segue" id="fpz-UC-l0D"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pHY-Cg-JWw">
-                                <rect key="frame" x="16" y="84" width="343" height="583"/>
+                                <rect key="frame" x="16" y="84" width="343" height="540"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bSE-fV-dmm">
@@ -148,17 +148,25 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyb-MQ-jtK">
+                                <rect key="frame" x="166" y="632" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rQ4-dT-5NF"/>
                     </view>
                     <connections>
                         <outlet property="PoseCollectionView" destination="pHY-Cg-JWw" id="mIS-Ue-2Vf"/>
+                        <outlet property="testLabel" destination="Dyb-MQ-jtK" id="ybZ-HU-6uR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ogI-kP-QOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="-141"/>
+            <point key="canvasLocation" x="1533.5999999999999" y="-141.67916041979012"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="XFp-8o-lh3">

@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var images = [CategoryCell]()
     
-
+    var identifier = "";
     /*
     @IBAction func testFavsButton(_ sender: Any) {
         performSegue(withIdentifier: "testButton", sender: self)
@@ -73,8 +73,16 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // You can use indexPath to get "cell number x", or get the cell like:
-        let temp = images[indexPath.row].ImageName
-        tommyLabel.text = temp
+        let temp = images[indexPath.row]
+        identifier = temp.Identifier
+        performSegue(withIdentifier: "segue", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var testController = segue.destination as! PoseViewController
+        testController.testString = identifier
+        
     }
     
     func loadData() {
