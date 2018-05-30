@@ -74,14 +74,12 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // You can use indexPath to get "cell number x", or get the cell like:
         let temp = images[indexPath.row]
-        identifier = temp.Identifier
-        performSegue(withIdentifier: "segue", sender: self)
-        
+        identifier = temp.Identifier        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var testController = segue.destination as! PoseViewController
-        testController.testString = identifier
+        testController.categoryName = identifier
         
     }
     

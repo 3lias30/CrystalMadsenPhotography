@@ -19,15 +19,15 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     var labels = [ImageCell]()
     
-    var testString: String = ""
+    var categoryName: String = ""
     
     @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(testString)
-        testLabel.text = testString
+        print(categoryName)
+        // testLabel.text = testString
         
         db = Firestore.firestore();
         storage = Storage.storage();
@@ -35,9 +35,9 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
         DispatchQueue.main.async {
             self.loadData()
         }
-        
-        self.PoseCollectionView.delegate = self
         self.PoseCollectionView.dataSource = self
+        self.PoseCollectionView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
     
@@ -73,7 +73,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     
     func loadData() {
         
-        let userRef = db.collection(testString);
+        let userRef = db.collection("Bowing");
         userRef.getDocuments() { (querySnapshot, err) in
             
             if let err = err {
@@ -95,7 +95,7 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
                         } else {
                             // Data for "images/island.jpg" is returned
                             image = UIImage(data: data!)
-                            self.labels.append(ImageCell(image: UIImage(data: data!)!, name: name, description: identifier!))
+                            self.labels.append(ImageCell(image: UIImage(data: data!)!, name: name, description: ""))
                             self.PoseCollectionView.reloadData()
                             
                         }
