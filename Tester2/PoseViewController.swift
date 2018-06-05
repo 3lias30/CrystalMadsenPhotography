@@ -26,13 +26,14 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(categoryName)
+        // print(categoryName)
         // testLabel.text = testString
         
         db = Firestore.firestore();
         storage = Storage.storage();
         
         DispatchQueue.main.async {
+            print(self.categoryName)
             self.loadData()
         }
         self.PoseCollectionView.dataSource = self
@@ -72,8 +73,8 @@ class PoseViewController: UIViewController , UICollectionViewDelegate, UICollect
  
     
     func loadData() {
-        
-        let userRef = db.collection("Bowing");
+        if (categoryName == "") {return}
+        let userRef = db.collection(categoryName);
         userRef.getDocuments() { (querySnapshot, err) in
             
             if let err = err {

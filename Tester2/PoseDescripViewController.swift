@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class FavoritesViewController: UIViewController ,  UICollectionViewDelegate, UICollectionViewDataSource{
+class PoseDescripViewController: UIViewController ,  UICollectionViewDelegate, UICollectionViewDataSource{
     
     var testThingy: [testCell] = [
         testCell(image2: UIImage(named: "Pose03.jpg")!)
@@ -21,20 +21,22 @@ class FavoritesViewController: UIViewController ,  UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell2", for: indexPath) as! FavoritesCollectionViewCell
+        let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "collection_cell2", for: indexPath) as! PoseDecripCollectionViewCell
         
         cell2.imageView.image = testThingy[indexPath.row].image2
         
         return cell2
     }
     
-
-    @IBOutlet weak var FavoriteCollectionView: UICollectionView!
+    
+    @IBOutlet weak var PoseDescripCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.FavoriteCollectionView.delegate = self
-        self.FavoriteCollectionView.dataSource = self
+        self.PoseDescripCollectionView.delegate = self
+        self.PoseDescripCollectionView.dataSource = self
         // Do any additional setup after loading the view.
     }
 

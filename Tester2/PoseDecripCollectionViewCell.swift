@@ -1,5 +1,5 @@
 //
-//  FavoritesCollectionViewCell.swift
+//  PoseDescripCollectionViewCell.swift
 //  Tester2
 //
 //  Created by CS Student on 5/3/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FavoritesCollectionViewCell: UICollectionViewCell {
+class PoseDecripCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
 }
 
